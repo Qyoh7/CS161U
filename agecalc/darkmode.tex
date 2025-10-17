@@ -1,0 +1,17 @@
+% ----- Dark-mode PDF theme -----
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\pagecolor[rgb]{0.08,0.09,0.1}      % background (almost black)
+\color[rgb]{0.85,0.85,0.85}         % main text color (light gray)
+
+% make links cyan instead of bright red
+\hypersetup{
+  colorlinks=true,
+  linkcolor=[rgb]{0.4,0.7,0.9},
+  urlcolor=[rgb]{0.4,0.7,0.9},
+  citecolor=[rgb]{0.5,0.8,0.9}
+}
+
+% make verbatim/code blocks slightly darker background
+\usepackage{framed}
+\definecolor{shadecolor}{rgb}{0.15,0.16,0.18}
