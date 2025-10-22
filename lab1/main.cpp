@@ -1,18 +1,25 @@
 #include <iostream>
-#include <ostream>
 
+using namespace std;
 
 int main()
 {
-    int age;
+    string name;
+    int adultTickets;
+    int childTickets;
 
-    std::cout << "enter your age" << std::endl;
-    std::cin >> age;
+    cout << "Enter movie name" << endl;
+    getline(cin, name);
+    cout << "Enter # of child tickets sold" << endl;
+    cin >> childTickets;
+    cout << "Enter # of adult tickets sold" << endl;
+    cin >> adultTickets;
 
-    int leapYears = age / 4;
-    
-    int ageInDays = (age * 365) + leapYears;
+    double grossProfit = (childTickets * 3) + (adultTickets * 6);
+    double netProfit = grossProfit * .2;
+    cout << "Gross box office profit: $" << grossProfit << endl;
+    cout << "Net box office profit: $" << netProfit << endl;
 
-    std::cout << ageInDays;
+    name = "";
     return 0;
 }
