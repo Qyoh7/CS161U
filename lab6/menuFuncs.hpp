@@ -1,15 +1,4 @@
 #pragma once
-#include <iostream>
-using std::cout;
-/*
-		"1) Is a number odd or even?\n"
-		"2) Is a number positive or negative?\n"
-		"3) How many digits are in a number?\n"
-		"4) What digit is at a specific position?\n"
-		"5) Display the addition table.\n"
-		"6) Display the multiplication table.\n"
-		"7) Exit\n\n";
-*/
 
 int getData();
 void displayMenu(int& menuChoice);
