@@ -15,28 +15,42 @@ int main()
     {
         cout << "Enter answer for #" << i + 1 << '\n';
         cin >> ans;
-        if (tolower(ans) != ('a' || 'b' || 'c' || 'd'))
+        ans = tolower(ans);
+        if (ans == 'a' || ans == 'b' || ans == 'c' || ans == 'd')
         {
-            cout << "Invalid answer. Please enter A, B, C, or D\n";
-            i--;
+            userAnswers.push_back(tolower(ans));
         }
         else 
         {
-            userAnswers.push_back(tolower(ans));
+            cout << "Invalid answer. Please enter A, B, C, or D\n";
+            cout << ans << "\n";
+            i--;
         }
     }
     for (int i = 0; i < userAnswers.size(); i++)
     {
-        if (userAnswers.at(i) != ans)
+        if (userAnswers.at(i) != answerKey.at(i))
         {
             incorrect++;
             incorrectAnswers.push_back(i);
         }
     }
     cout << "Score: " << answerKey.size() - incorrect << " / " << answerKey.size() << "\n";
-    cout << "Incorrect Answers: \n";
-    for (int ans : incorrectAnswers)
+    if (incorrect <= 5)
     {
-        cout << ans << "\n";
+        cout << "Student passed\n";
+    }
+    else
+    {
+        cout << "Student failed\n";
+    }
+
+    if (incorrect != 0)
+    {
+        cout << "Incorrect Answers: \n";
+        for (int ans : incorrectAnswers)
+        {
+            cout << ans << "\n";
+        }
     }
 }
